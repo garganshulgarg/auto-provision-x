@@ -25,6 +25,7 @@ jobs:
           pip install mkdocs-awesome-pages-plugin
           pip install mkdocs_include_markdown_plugin
           pip install mkdocs-mermaid2-plugin
+          pip install mkdocs-literate-nav
 
       - name: Build MkDocs site
         run: mkdocs build
