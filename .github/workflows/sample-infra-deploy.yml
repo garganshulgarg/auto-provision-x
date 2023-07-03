@@ -19,6 +19,9 @@ jobs:
   sample-infra-operators:
     runs-on: ubuntu-latest
 
+    env:
+      TF_COMMAND: "${{ github.event.inputs.TERRAFORM_ACTION }}"
+
     steps:
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -39,5 +42,5 @@ jobs:
           aws-region: us-east-1
       
       - name: Deploy/Destroy Sample Infra
-        run: python ./scripts/sample_infra_deploy.py
+        run: python ./scripts/sample_infra_deploy.py $TF_COMMAND
       
