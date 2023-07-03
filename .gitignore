@@ -1,1 +1,11 @@
 node_modules
+*.tfvars
+*.tfstate
+*.tfstate.*
+*.lock.*
+.terraform/
+.logs/
+terraform*.log
+go.mod
+go.sum
+__pycache__/**
