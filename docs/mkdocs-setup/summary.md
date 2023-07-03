@@ -1,2 +1,0 @@
-- [Local Setup](mkdocs-local-setup.md)
-- [Github Pages Setup](gh-pages-setup.md)
