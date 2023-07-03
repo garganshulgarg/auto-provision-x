@@ -20,6 +20,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install Dependencies
+        run: pip install -r ./scripts/requirements.txt
+
       - name: Checkout Code
         uses: actions/checkout@v2
 
@@ -30,8 +38,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy/Destroy Sample Infra
-        run: |
-          cd ./samples
-          terraform init
-          terraform plan
+        run: python ./scripts/sample_infra_deploy.py
       
