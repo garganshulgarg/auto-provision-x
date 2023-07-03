@@ -1,0 +1,22 @@
+{
+  "name": "auto-provision-x",
+  "version": "1.0.0",
+  "description": "This project serves as a sample project aimed at improving knowledge about AWS and GCP infrastructure automation through the use of Terraform. In order to maximize learning, we will incorporate GitHub Actions within this project.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garganshulgarg/auto-provision-x"
+  },
+  "author": "Anshul Garg",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}
