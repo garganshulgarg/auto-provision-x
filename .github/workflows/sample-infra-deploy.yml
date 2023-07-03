@@ -1,4 +1,5 @@
 name: Sample Infra Deploy/Destroy
+
 on: 
   workflow_dispatch:
     inputs:
@@ -43,4 +44,3 @@ jobs:
       
       - name: Deploy/Destroy Sample Infra
         run: python ./scripts/sample_infra_deploy.py $TF_COMMAND
-      
