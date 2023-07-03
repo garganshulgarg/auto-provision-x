@@ -10,3 +10,6 @@ Installing Husky
 
 #For npm
 npx husky-init && npm install
+
+
+https://typicode.github.io/husky/getting-started.html
