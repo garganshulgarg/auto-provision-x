@@ -7,7 +7,7 @@ sort:
   by: required
 settings:
   indent: 3
-header-from: CLIENT_HEADER.md
+header-from: HEADER.md
 content: |-
 
   {{ .Header }}

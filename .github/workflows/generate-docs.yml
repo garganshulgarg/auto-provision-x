@@ -17,13 +17,13 @@ jobs:
       with:
        find-dir: modules/
        git-push: "true"
-       config-file: ./docs/docs-auto-generate-configs/.client-header-terraform-docs.yml
-       output-file: CLIENT_HEADER.md    
+       config-file: ./docs/docs-auto-generate-configs/.header-terraform-docs.yml
+       output-file: HEADER.md    
     - name: Generate client documents.
       timeout-minutes: 4
       uses: terraform-docs/gh-actions@v1.0.0
       with:
        find-dir: modules/
        git-push: "true"
-       config-file: ./docs/docs-auto-generate-configs/.client-usage-terraform-docs.yml
-       output-file: CLIENT_USAGE.md
+       config-file: ./docs/docs-auto-generate-configs/.auto-generated-terraform-docs.yml
+       output-file: AUTO-GENERATED.md
