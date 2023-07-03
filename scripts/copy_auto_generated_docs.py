@@ -20,10 +20,7 @@ def copy_and_rename_auto_generated_files(parent_folder):
                 parent_dir = os.path.basename(os.path.dirname(source_file))
 
                 # Construct the destination file path
-                destination_file = os.path.join("docs", root, parent_dir + ".md")
-
-                # Print the destination file path
-                print(f"Destination File: {destination_file}")
+                destination_file = os.path.join("docs", os.path.dirname(root), parent_dir + ".md")   
 
                 # Create necessary directories in the destination path if they don't exist
                 os.makedirs(os.path.dirname(destination_file), exist_ok=True)
