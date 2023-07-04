@@ -6,5 +6,5 @@ By detailing the best practices adopted for this repository, it becomes easier t
 
 By referring back to this section, you can easily identify and implement the best practices that were successfully employed during the establishment of the current repository. This approach fosters efficiency and maintains a standardized structure, contributing to the overall organization and management of projects in the future.
 
-- [Husky Setup](husky-setup/)
-- [Mkdocs Setup](mkdocs-setup/)
+- [Husky Setup](husky-setup/summary.md)
+- [Mkdocs Setup](mkdocs-setup/summary.md)
