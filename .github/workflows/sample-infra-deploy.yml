@@ -22,7 +22,7 @@ jobs:
 
     env:
       TF_COMMAND: "${{ github.event.inputs.TERRAFORM_ACTION }}"
-
+      GCP_PROJECT_ID: "${{ secrets.GCP_PROJECT_ID }}"
     steps:
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -34,6 +34,14 @@ jobs:
 
       - name: Checkout Code
         uses: actions/checkout@v2
+      
+      - id: 'google-auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v0.4.0'
+        with:
+          token_format: 'access_token'
+          workload_identity_provider: 'projects/${{ secrets.GCP_ACCOUNT_ID }}/locations/global/workloadIdentityPools/auto-provision-x-identity-pool/providers/auto-provision-x-oidc-provider'
+          service_account: 'auto-provision-x@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com'
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
