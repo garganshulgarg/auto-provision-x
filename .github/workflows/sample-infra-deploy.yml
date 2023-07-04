@@ -43,7 +43,7 @@ jobs:
           workload_identity_provider: 'projects/${{ secrets.GCP_ACCOUNT_ID }}/locations/global/workloadIdentityPools/auto-provision-x-identity-pool/providers/auto-provision-x-oidc-provider'
           service_account: 'auto-provision-x@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com'
 
-      - name: Configure AWS Credentials
+      - name: 'Authenticate to AWS Cloud'
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/auto-provision-x-oidc-role
