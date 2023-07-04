@@ -4,3 +4,4 @@ Before proceeding with the infrastructure deployments, certain prerequisite step
 
 
 - [GCP Prerequisite](gcp_prerequisite.md)
+- [AWS Prerequisite](aws_prerequisite.md)
