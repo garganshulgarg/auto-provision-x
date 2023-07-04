@@ -47,7 +47,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/auto-provision-x-oidc-role
-          role-duration-seconds: 600 # the ttl of the session, in seconds.
+          role-duration-seconds: 900 # the ttl of the session, in seconds.
           aws-region: us-east-1
           
       - name: Deploy/Destroy Sample Infra
