@@ -2,11 +2,6 @@ site_name: Auto Provision X
 repo_name: garganshulgarg/auto-provision-x
 repo_url: https://github.com/garganshulgarg/auto-provision-x
 docs_dir: "docs"
-# nav:
-#   - Home: summary.md
-#   - Infrastructure Deployment Prerequisites: infra-deployment-prerequisite/
-#   - AWS Terraform Modules: modules/aws/
-#   - Repository Setup: repository-setup-guide/
 
 theme:
   name: material
