@@ -1,5 +1,5 @@
 module "gcp_setup-apache-on-vm" {
-  source                = "git::https://github.com/garganshulgarg/auto-provision-x.git//modules/gcp/setup-apache-on-vm/?ref=gcp-setup-apache-on-vm"
+  source                = "git::https://github.com/garganshulgarg/auto-provision-x.git//modules/gcp/setup-apache-on-vm/?ref=main"
   name                  = "setup-apache-on-vm"
   description           = "we are setting up apache on this GCP Virtual Machine."
   allowed_source_ranges = ["0.0.0.0/0"]
