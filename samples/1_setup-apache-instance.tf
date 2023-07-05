@@ -18,7 +18,7 @@ output "output_gcp_public_ip" {
 
 
 module "aws_setup-apache-on-ec2" {
-  source                = "git::https://github.com/garganshulgarg/auto-provision-x.git//modules/awsgcp/setup-apache-on-ec2/?ref=aws-setup-apache-on-ec2"
+  source                = "git::https://github.com/garganshulgarg/auto-provision-x.git//modules/aws/setup-apache-on-ec2/?ref=aws-setup-apache-on-ec2"
   allowed_source_ranges = ["0.0.0.0/0"]
   required_tags = {
     "owner"  = "garganshulgarg"
