@@ -58,12 +58,13 @@ resource "aws_security_group" "setup-apache-on-ec2" {
 
 resource "aws_iam_instance_profile" "setup-apache-on-ec2" {
   name = "setup-apache-on-ec2-instance-profile" # Replace with the desired name for the IAM instance profile
-  // role = aws_iam_role.setup-apache-on-ec2.name  # Use the name of the managed role
+  role = aws_iam_role.setup-apache-on-ec2.name  # Use the name of the managed role
   tags = var.required_tags
 }
 
 resource "aws_iam_role" "setup-apache-on-ec2" {
   name               = "setup-apache-on-ec2-role" # Replace with the desired name for the IAM role
+  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -82,8 +83,13 @@ EOF
   tags               = var.required_tags
 }
 
-resource "aws_iam_policy_attachment" "setup-apache-on-ec2" {
-  name       = "setup-apache-on-ec2-policy-attachment"
-  roles      = [aws_iam_role.setup-apache-on-ec2.name]
-  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
-}
+# resource "aws_iam_policy_attachment" "setup-apache-on-ec2" {
+#   name       = "setup-apache-on-ec2-policy-attachment"
+#   roles      = [aws_iam_role.setup-apache-on-ec2.name]
+#   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+# }
+
+
+
+
+
