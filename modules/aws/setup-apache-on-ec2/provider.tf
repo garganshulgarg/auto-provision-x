@@ -10,7 +10,6 @@ terraform {
 
 provider "aws" {
   region = local.aws_region
-  tags                   = var.required_tags
 }
 
 
