@@ -58,7 +58,7 @@ resource "aws_security_group" "setup-apache-on-ec2" {
 
 resource "aws_iam_instance_profile" "setup-apache-on-ec2" {
   name = "setup-apache-on-ec2-instance-profile" # Replace with the desired name for the IAM instance profile
-  role = aws_iam_role.setup-apache-on-ec2.name  # Use the name of the managed role
+  // role = aws_iam_role.setup-apache-on-ec2.name  # Use the name of the managed role
   tags = var.required_tags
 }
 
