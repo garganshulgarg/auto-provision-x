@@ -5,4 +5,5 @@ This project serves as a sample project aimed at improving knowledge about AWS a
 
 - [Infrastructure Deployment Prerequisites](infra-deployment-prerequisite/summary.md)
 - [AWS Terraform Modules](modules/aws/summary.md)
+- [GCP Terraform Modules](modules/gcp/summary.md)
 - [Repository Setup](repository-setup-guide/summary.md)
