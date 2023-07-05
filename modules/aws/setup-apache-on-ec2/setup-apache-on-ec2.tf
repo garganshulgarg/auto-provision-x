@@ -1,8 +1,11 @@
 
 resource "aws_instance" "setup-apache-on-ec2" {
-  ami           = data.aws_ami.ubuntu.id
+  // Attached the Image Ubuntu Server 22.04 LTS (HVM), SSD Volume Type because it has ssm-agent configured by default.
+  ami           = "ami-053b0d53c279acc90"
   instance_type = "t3.micro"
 
+  // IAM instance profile
+  iam_instance_profile = aws_iam_instance_profile.setup-apache-on-ec2.name
 
 
   user_data = <<-EOT
@@ -27,7 +30,7 @@ resource "aws_instance" "setup-apache-on-ec2" {
 }
 
 resource "aws_security_group" "setup-apache-on-ec2" {
-  name        = "security-group"
+  name        = "setup-apache-on-ec2-security-group"
   description = "Security group for inbound access to the node"
 
 
@@ -50,19 +53,8 @@ resource "aws_security_group" "setup-apache-on-ec2" {
   // Egress rules can also be defined if necessary
 }
 
-
-data "aws_ami" "ubuntu" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = ["099720109477"] # Canonical
+resource "aws_iam_instance_profile" "setup-apache-on-ec2" {
+  name = "setup-apache-on-ec2-instance-profile" # Replace with the desired name for the IAM instance profile
+  role = "AmazonSSMManagedInstanceCore"         # Use the name of the managed role
 }
+
