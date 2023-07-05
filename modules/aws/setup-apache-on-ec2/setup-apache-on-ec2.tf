@@ -5,7 +5,7 @@ resource "aws_instance" "setup-apache-on-ec2" {
   instance_type = "t3.micro"
 
   // IAM instance profile
-  // iam_instance_profile = aws_iam_instance_profile.setup-apache-on-ec2.name
+  iam_instance_profile = aws_iam_instance_profile.setup-apache-on-ec2.name
 
 
   user_data = <<-EOT
