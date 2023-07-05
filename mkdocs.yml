@@ -6,6 +6,7 @@ nav:
   - Home: index.md
   - Infrastructure Deployment Prerequisites: infra-deployment-prerequisite/
   - AWS Terraform Modules: modules/aws/
+  - GCP Terraform Modules: modules/gcp/
   - Repository Setup: repository-setup-guide/
 
 theme:
