@@ -52,3 +52,5 @@ jobs:
           
       - name: Deploy/Destroy Sample Infra
         run: python ./scripts/sample_infra_deploy.py $TF_COMMAND
+      - name: Terraform Output
+        run: python ./scripts/sample_infra_output
