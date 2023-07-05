@@ -35,5 +35,5 @@ module "gcp_setup-apache-on-vm" {
 
 | Name | Description |
 |------|-------------|
-| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | n/a |
+| <a name="output_public_ip"></a> [public\_ip](#output\_public\_ip) | GCP Public IP |
 <!-- END_TF_DOCS -->
