@@ -16,7 +16,7 @@ resource "google_compute_instance" "setup-apache-on-vm" {
     
     sudo su
     apt update 
-    apt install apache2
+    apt-get install -y apache2
     ls /var/www/html
     echo "Hello World!"
     echo "Hello World!" > /var/www/html/index.html
@@ -48,6 +48,6 @@ resource "google_compute_firewall" "http_allow" {
     ports    = ["80"]
   }
 
-  source_tags = ["http-server"]
+  source_ranges = ["0.0.0.0/0"]
   target_tags = ["http-server"]
 }
