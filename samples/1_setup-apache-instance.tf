@@ -28,7 +28,7 @@ module "aws_setup-apache-on-ec2" {
 }
 
 
-output "output_gcp_public_ip" {
+output "output_aws_public_ip" {
   description = "AWS EC2 Public IP"
   value       = module.aws_setup-apache-on-ec2.public_ip
 }
