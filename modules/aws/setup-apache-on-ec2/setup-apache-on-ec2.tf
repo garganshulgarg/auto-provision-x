@@ -86,5 +86,4 @@ resource "aws_iam_policy_attachment" "setup-apache-on-ec2" {
   name       = "setup-apache-on-ec2-policy-attachment"
   roles      = [aws_iam_role.setup-apache-on-ec2.name]
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
-  tags       = var.required_tags
 }
