@@ -16,3 +16,7 @@ module "aws_setup-apache-on-ec2" {
 
 
 ```
+<!-- BEGIN_TF_DOCS -->
+
+
+<!-- END_TF_DOCS -->
