@@ -35,7 +35,7 @@ resource "google_compute_instance" "setup-apache-on-vm" {
     }
   }
 
-  network_tags = ["http-server"]
+  tags = ["http-server"]
 }
 
 
